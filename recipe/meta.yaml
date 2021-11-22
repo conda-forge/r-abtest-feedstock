@@ -15,7 +15,6 @@ source:
 build:
   merge_build_host: true  # [win]
   number: 0
-
   rpaths:
     - lib/R/lib/
     - lib/
@@ -32,7 +31,6 @@ requirements:
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
-
   host:
     - r-base
     - r-matrix
@@ -43,7 +41,6 @@ requirements:
     - r-qgam
     - r-sn
     - r-truncnorm
-
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
@@ -65,7 +62,6 @@ about:
   home: https://CRAN.R-project.org/package=abtest
   license: GPL-2.0-or-later
   summary: Provides functions for Bayesian A/B testing including prior elicitation options based on Kass and Vaidyanathan (1992) <doi:10.1111/j.2517-6161.1992.tb01868.x>.
-
   license_family: GPL2
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
